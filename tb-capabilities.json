@@ -1,0 +1,89 @@
+{
+  "real-auth": {
+    "enabled": true,
+    "status": "available",
+    "setupMessage": "Authentication setup required",
+    "providerMode": "legacy-supabase",
+    "configuration": {
+      "authenticationRequired": true,
+      "providers": [
+        "email"
+      ],
+      "googleRequested": false,
+      "ownership": "tikkaburrito-managed",
+      "databaseMode": "managed-per-app",
+      "databaseProvisioningStatus": "idle",
+      "generatedSubdomainOrigin": null,
+      "verifiedCustomOrigins": [],
+      "protectedRoutes": [],
+      "setupActions": [
+        "provision-per-app-database",
+        "activate-exact-origin",
+        "run-runtime-login-check"
+      ],
+      "runtimeVerification": "not_run"
+    }
+  },
+  "ai-chat": {
+    "enabled": false,
+    "status": "failed",
+    "setupMessage": "AI Assistant is not included yet; the app will show an honest setup-required state instead.",
+    "providerMode": "unavailable",
+    "configuration": {
+      "metering": "owner-credits",
+      "providerKeysInGeneratedApp": false
+    }
+  },
+  "forms": {
+    "enabled": false,
+    "status": "failed",
+    "setupMessage": "Form submissions are not included because managed forms are unavailable for this build.",
+    "providerMode": "managed-gateway",
+    "configuration": {
+      "scopes": [
+        "form-submission"
+      ]
+    }
+  },
+  "owner-email": {
+    "enabled": false,
+    "status": "failed",
+    "setupMessage": "This capability is unavailable because forms is not ready.",
+    "providerMode": "platform-managed",
+    "configuration": {
+      "transport": "platform-forwarding",
+      "recipientResolution": "server-side"
+    }
+  },
+  "transactional-email": {
+    "enabled": false,
+    "status": "inactive",
+    "setupMessage": "Transactional email setup required",
+    "providerMode": "unavailable",
+    "configuration": {}
+  },
+  "persistent-data": {
+    "enabled": false,
+    "status": "failed",
+    "setupMessage": "Saved data is not included because the managed database is unavailable for this build.",
+    "providerMode": "managed-gateway",
+    "configuration": {
+      "scopes": [
+        "products",
+        "inventory_items",
+        "orders",
+        "order_items",
+        "customers",
+        "messages"
+      ],
+      "visibility": "private"
+    }
+  },
+  "scheduling": {
+    "enabled": false,
+    "status": "inactive",
+    "setupMessage": "Scheduling setup required",
+    "providerMode": "unavailable",
+    "configuration": {}
+  }
+}
